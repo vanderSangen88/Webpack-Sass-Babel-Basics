@@ -1,24 +1,26 @@
 {
-  "name": "webpack-sass-babel-basics",
+  "name": "webpack2-basics",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack-dev-server",
     "build:prod": "webpack -p"
   },
-  "author": "Max Schwartzmueller",
+  "keywords": [],
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.24.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.0",
     "css-loader": "^0.28.9",
     "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.11.1"
+    "node-sass": "^4.5.1",
+    "sass-loader": "^6.0.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.4.2"
   }
 }

@@ -2,21 +2,20 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-    filenmane: 'maincss',
-    chunksSortMode: 'dependency'
+   filename: 'main.css'
 });
 
 module.exports = {
-    entry: './src/js/app.js', // relative path
+    entry: './src/js/app.js',
     output: {
-        path: path.resolve(__dirname, '.dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         publicPath: '/dist'
     },
     module: {
         rules: [
             {
-                test: /\.js$/, 
+                test: /\.js$/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -25,7 +24,8 @@ module.exports = {
                         }
                     }
                 ]
-            }, {
+            },
+            {
                 test: /\.scss$/,
                 use: extractPlugin.extract({
                     use: ['css-loader', 'sass-loader']
@@ -36,4 +36,4 @@ module.exports = {
     plugins: [
         extractPlugin
     ]
-}
+};
